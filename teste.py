@@ -1,1 +1,0 @@
-print("Hello mundao grande de meu Deus")
