@@ -1,10 +1,10 @@
 import getpass
-import index
+import index, menu
 
-def entrar():
+def entra():
   if index.decisao == 1:
         user =  input("Coloque seu nome de usuario: ")
-        senha = getpass.getpass("Coloque sua senha: ")
+        senha = input("Coloque sua senha: ")
 
         if user == "" or senha == "":
           print("Coloque os dados corretamente")
@@ -13,18 +13,19 @@ def entrar():
              if user == linha["nome"] and senha == linha['senha']:
                 if linha['nivel'] == 1:
                    userMas = False
+                   menu.menuUser()
                 elif linha['nivel'] == 2:
                    userMas = True
-                   menuMaster()   
-          if not index.autentico:
-             print("User ou senha errado!")
-
-          if linha['nivel'] == 1 and index.autentico == True:
-             print("Chama MenuUser")
+                   menu.menuMaster()
+             else:
+                print("Algo deu errado, tente novamente!")
+                autenticado = False
+          
              
           
 
-  return entrar()
+  return autenticado
+
 
 
 
