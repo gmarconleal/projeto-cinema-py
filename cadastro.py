@@ -28,7 +28,7 @@ def Cadastro():
                     conexao.commit()
                     print('Usuario cadastrado com sucesso!')
               except:
-                print('Erro ao inserir os dados!')
+                print('Erro ao inserir os dados! Tente novamente')
                 print(userEx)
         
      
