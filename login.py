@@ -3,6 +3,7 @@ import index, menu
 
 def entra():
   if index.decisao == 1:
+        print("Faça o login!")
         user =  input("Coloque seu nome de usuario: ")
         senha = input("Coloque sua senha: ")
 
@@ -13,18 +14,18 @@ def entra():
              if user == linha["nome"] and senha == linha['senha']:
                 if linha['nivel'] == 1:
                    userMas = False
+                   index.autentico = True
                    menu.menuUser()
+                  
                 elif linha['nivel'] == 2:
                    userMas = True
                    menu.menuMaster()
-             else:
-                print("Algo deu errado, tente novamente!")
-                autenticado = False
+             
           
              
           
 
-  return autenticado
+  return index.autentico
 
 
 
