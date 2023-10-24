@@ -1,5 +1,5 @@
 import getpass
-import index, menu
+import index, menu,cadastro
 
 def entra():
   if index.decisao == 1:
@@ -11,21 +11,25 @@ def entra():
           print("Coloque os dados corretamente")
         else:
           for linha in index.resultado:
-             if user == linha["nome"] and senha == linha['senha']:
-                if linha['nivel'] == 1:
+            if user == linha["nome"] and senha == linha['senha']:
+               if linha['nivel'] == 1:
                    userMas = False
                    index.autentico = True
                    menu.menuUser()
                   
-                elif linha['nivel'] == 2:
+               elif linha['nivel'] == 2:
                    userMas = True
                    menu.menuMaster()
+               else:
+                  print("User não encontrado! Faça seu cadastro!")
+                  cadastro.Cadastro()
+         
              
           
              
           
 
-  return index.autentico
+  return index.autentico,user
 
 
 

@@ -1,7 +1,6 @@
 import pymysql.cursors
 import cadastro,Login
 
-
 conexao = pymysql.connect(
     host = 'localhost',
     user = 'root',
@@ -12,9 +11,10 @@ conexao = pymysql.connect(
 )
 
 autentico = False
+
 while autentico == False:
 
-       decisao = int(input('digite 1 para logar e 2 para cadastrar: '))
+       decisao = int(input('Digite 1 para logar e 2 para cadastrar: '))
        try:
               with conexao.cursor() as cursor:
                      cursor.execute('select * from cadastros')
@@ -22,9 +22,13 @@ while autentico == False:
        except:
               print('erro ao conectar no banco de dados!')
        if decisao == 1:
-        Login.entra()
+              Login.entra()
        elif decisao == 2:
-        cadastro.Cadastro()
+              cadastro.Cadastro()
+       else:
+              break
+
+     
        
 
     
