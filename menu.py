@@ -21,6 +21,7 @@ def menuMaster():
     escolhaMas = int(input("1 - Adicionar novos filmes\n 2 - Filmes em cartaz \n 3 - Adicionar Novos funcionarios\n 4 - Ver quadro de funcionários \n 5 - Sair \n"))
     if escolhaMas == 1:
         print("Cadastro de novos filmes")
+        
     elif escolhaMas == 2:
         print("Filmes em cartaz")
     elif escolhaMas == 3:
@@ -50,7 +51,7 @@ def menuUser():
         while compra != 0:
             if compra == 1:
                 print("Escolha seu horário: ")
-                break
+                
     else:
         print("Saindo...")
          

@@ -25,8 +25,7 @@ while autentico == False:
               Login.entra()
        elif decisao == 2:
               cadastro.Cadastro()
-       else:
-              break
+      
 
      
        
