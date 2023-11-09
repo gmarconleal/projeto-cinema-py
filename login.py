@@ -1,4 +1,3 @@
-import getpass
 import index, menu,cadastro
 
 def entra():

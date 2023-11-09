@@ -1,5 +1,6 @@
 import pymysql.cursors
-import index, Login
+from menuMasterFun import cadastroFilmes
+import menuMasterFun
 
 conexao = pymysql.connect(
      host = 'localhost',
@@ -21,9 +22,10 @@ def menuMaster():
     escolhaMas = int(input("1 - Adicionar novos filmes\n 2 - Filmes em cartaz \n 3 - Adicionar Novos funcionarios\n 4 - Ver quadro de funcionários \n 5 - Sair \n"))
     if escolhaMas == 1:
         print("Cadastro de novos filmes")
-        
+        menuMasterFun.cadastroFilmes()
     elif escolhaMas == 2:
         print("Filmes em cartaz")
+        menuMasterFun.filmesCartaz()
     elif escolhaMas == 3:
         print("Adicionar novos funcionários")
     elif escolhaMas == 4:
